@@ -80,7 +80,7 @@ class RegistrationViewController: UIViewController {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if(textField == txtConfirmPasswd){
-            textField.resignFirstResponder()
+           // textField.resignFirstResponder()
         }
         return true
     }
