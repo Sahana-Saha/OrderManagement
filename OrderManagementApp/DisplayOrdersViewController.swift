@@ -49,15 +49,11 @@ class DisplayOrdersViewController: UIViewController,UITableViewDelegate,UITableV
         let nib = UINib(nibName: "OrderTableViewCell", bundle: nil)
         orderTblVw.register(nib, forCellReuseIdentifier: "VwCell")
         showDatePicker()
+        setupToolbar()
         popUpView.isHidden = true
         // Do any additional setup after loading the view.
     }
     
-    
-    @objc func dismissMyKeyboard()
-    {
-        view.endEditing(true)
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         fetchRequest()
@@ -90,76 +86,7 @@ class DisplayOrdersViewController: UIViewController,UITableViewDelegate,UITableV
         }
     
     
-    func showDatePicker(){
-        //Formate Date
-        datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .wheels
-        datePicker.minimumDate = Date()
-//        datePicker.frame = CGRect(x: 10, y: 50, width: self.view.frame.width, height: 200)
-       //ToolBar
-       let toolbar = UIToolbar();
-       toolbar.sizeToFit()
-       let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-      let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
-
-     toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
-
-      txtOrderDueDate1.inputAccessoryView = toolbar
-        txtOrderDueDate1.inputView = datePicker
-
-     }
     
-
-      @objc func donedatePicker(){
-
-       let formatter = DateFormatter()
-       formatter.dateFormat = "dd/MM/yyyy"
-        txtOrderDueDate1.text = formatter.string(from: datePicker.date)
-       self.view.endEditing(true)
-     }
-
-     @objc func cancelDatePicker(){
-        self.view.endEditing(true)
-      }
-
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        
-        if(textField.tag == 501){
-            self.view.endEditing(true)
-           
-            self.view.addSubview(datePicker)
-            self.view.addSubview(toolBar)
-        }
-        
-        return true
-    }
-    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if(textField.tag == 500){
-            textField.resignFirstResponder()
-            let txtFld = self.view.viewWithTag(501) as! UITextField
-            txtFld.becomeFirstResponder()
-        }
-        else if(textField.tag == 501){
-            textField.resignFirstResponder()
-            let txtFld = self.view.viewWithTag(502) as! UITextField
-            txtFld.becomeFirstResponder()
-        }
-        else if(textField.tag == 502){
-            textField.resignFirstResponder()
-            let txtFld = self.view.viewWithTag(503) as! UITextField
-            txtFld.becomeFirstResponder()
-        }
-        else if(textField.tag == 503){
-            textField.resignFirstResponder()
-            let txtFld = self.view.viewWithTag(504) as! UITextView
-            txtFld.becomeFirstResponder()
-        }
-        
-        return true
-    }
     
     
 
@@ -356,9 +283,98 @@ class DisplayOrdersViewController: UIViewController,UITableViewDelegate,UITableV
         txtCustomerPhone.placeholder = "Enter Phone"
                 
     }
+
+}
+
+
+extension DisplayOrdersViewController : UITextViewDelegate{
+    
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.minimumDate = Date()
+//        datePicker.frame = CGRect(x: 10, y: 50, width: self.view.frame.width, height: 200)
+       //ToolBar
+       let toolbar = UIToolbar();
+       toolbar.sizeToFit()
+       let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker));
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+      let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelDatePicker));
+
+     toolbar.setItems([doneButton,spaceButton,cancelButton], animated: false)
+
+      txtOrderDueDate1.inputAccessoryView = toolbar
+        txtOrderDueDate1.inputView = datePicker
+        txtAdress.inputAccessoryView = toolbar
+
+     }
+    
+
+      @objc func donedatePicker(){
+
+       let formatter = DateFormatter()
+       formatter.dateFormat = "dd/MM/yyyy"
+        txtOrderDueDate1.text = formatter.string(from: datePicker.date)
+       self.view.endEditing(true)
+     }
+
+     @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+      }
+
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if(textField.tag == 501){
+            self.view.endEditing(true)
+           
+            self.view.addSubview(datePicker)
+            self.view.addSubview(toolBar)
+        }
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField.tag == 500){
+            textField.resignFirstResponder()
+            let txtFld = self.view.viewWithTag(501) as! UITextField
+            txtFld.becomeFirstResponder()
+        }
+        else if(textField.tag == 501){
+            textField.resignFirstResponder()
+            let txtFld = self.view.viewWithTag(502) as! UITextField
+            txtFld.becomeFirstResponder()
+        }
+        else if(textField.tag == 502){
+            textField.resignFirstResponder()
+            let txtFld = self.view.viewWithTag(503) as! UITextField
+            txtFld.becomeFirstResponder()
+        }
+        else if(textField.tag == 503){
+            textField.resignFirstResponder()
+            let txtFld = self.view.viewWithTag(504) as! UITextView
+            txtFld.becomeFirstResponder()
+        }else{
+            self.view.endEditing(true)
+        }
+        
+        return true
+    }
     
     
     
+    func setupToolbar(){
+        let bar = UIToolbar()
+        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismissMyKeyboard))
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        bar.items = [ flexSpace, doneBtn]
+        bar.sizeToFit()
+        txtOrderNumber1.inputAccessoryView = bar
+    }
     
-    
+    @objc func dismissMyKeyboard()
+    {
+        view.endEditing(true)
+    }
 }
