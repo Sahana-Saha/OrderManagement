@@ -78,7 +78,22 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
+        if(textField == txtLoginUserName){
+            textField.resignFirstResponder()
+            txtLoginPassword.becomeFirstResponder()
+        }else{
+            self.view.endEditing(true)
+        }
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if(textField == txtLoginUserName){
+            let defaults = UserDefaults.standard
+            if(defaults.value(forKey: "UserName") != nil) && textField.text != defaults.value(forKey: "UserName") as! String{
+                btnRemember.isSelected = false
+            }
+        }
     }
     
     @IBAction func btnLoginClicked(_ sender: Any) {

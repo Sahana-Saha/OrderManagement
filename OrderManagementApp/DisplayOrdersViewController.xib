@@ -115,7 +115,7 @@
                                         <constraint firstAttribute="height" constant="18" id="118-I3-4Xv"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                     <connections>
                                         <outlet property="delegate" destination="-1" id="AZR-sC-1cs"/>
                                     </connections>

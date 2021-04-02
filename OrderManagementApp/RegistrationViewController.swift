@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: UIViewController,UITextFieldDelegate {
     
     
     @IBOutlet weak var btnRegister: UIButton!
@@ -43,34 +43,20 @@ class RegistrationViewController: UIViewController {
         return passwordTest.evaluate(with: passwordString)
     }
     
-    /*-(BOOL)isValidPassword:(NSString *)passwordString
-     {
-         NSString *stricterFilterString = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
-         NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", stricterFilterString];
-         return [passwordTest evaluateWithObject:passwordString];
-     }
-     */
-    
-//    func designToolBar(_ isPrev : ){
-//        let bar = UIToolbar()
-//        let next = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(btnNextClicked))
-//        let prev = UIBarButtonItem(title: "Prev", style: .plain, target: self, action: #selector(btnPrevClicked))
-//        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-//        let doneBtn = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismissMyKeyboard))
-//        bar.items = [next,prev,flexSpace, doneBtn]
-//        bar.sizeToFit()
-//        txtConfirmPasswd.inputAccessoryView = bar
-//    }
-    
-//    @objc func dismissMyKeyboard()
-//    {
-//        view.endEditing(true)
-//    }
-//
-//    @objc func btnNextClicked()
-//    {
-//        view.endEditing(true)
-//    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField == txtUserName){
+            textField.resignFirstResponder()
+            txtPassword.becomeFirstResponder()
+        }
+        else if(textField == txtPassword){
+            textField.resignFirstResponder()
+            txtConfirmPasswd.becomeFirstResponder()
+        }
+        else{
+            self.view.endEditing(true)
+        }
+        return true
+    }
 
     
     @IBAction func btnLoginPageClicked(_ sender: Any) {
@@ -78,12 +64,6 @@ class RegistrationViewController: UIViewController {
         self.navigationController?.pushViewController(rvc, animated: true)
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if(textField == txtConfirmPasswd){
-           // textField.resignFirstResponder()
-        }
-        return true
-    }
     
     func fetchRequest(){
         do{
