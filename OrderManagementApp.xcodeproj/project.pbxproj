@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E740BC6A261473E3006677B7 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC68261473E3006677B7 /* RegistrationViewController.swift */; };
+		E740BC6B261473E3006677B7 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E740BC69261473E3006677B7 /* RegistrationViewController.xib */; };
+		E740BC6F261474B1006677B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC6D261474B1006677B7 /* LoginViewController.swift */; };
+		E740BC70261474B1006677B7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E740BC6E261474B1006677B7 /* LoginViewController.xib */; };
+		E740BC742614767C006677B7 /* DisplayOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC722614767C006677B7 /* DisplayOrdersViewController.swift */; };
+		E740BC752614767C006677B7 /* DisplayOrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E740BC732614767C006677B7 /* DisplayOrdersViewController.xib */; };
+		E740BC79261479B2006677B7 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC77261479B2006677B7 /* OrderTableViewCell.swift */; };
+		E740BC7A261479B2006677B7 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E740BC78261479B2006677B7 /* OrderTableViewCell.xib */; };
+		E740BC8B2614A3B0006677B7 /* LoginUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC872614A3B0006677B7 /* LoginUser+CoreDataClass.swift */; };
+		E740BC8C2614A3B0006677B7 /* LoginUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC882614A3B0006677B7 /* LoginUser+CoreDataProperties.swift */; };
+		E740BC8D2614A3B0006677B7 /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC892614A3B0006677B7 /* Order+CoreDataClass.swift */; };
+		E740BC8E2614A3B0006677B7 /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E740BC8A2614A3B0006677B7 /* Order+CoreDataProperties.swift */; };
 		E7E73808261468CD00D0C728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E73807261468CD00D0C728 /* AppDelegate.swift */; };
 		E7E7380A261468CD00D0C728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E73809261468CD00D0C728 /* SceneDelegate.swift */; };
 		E7E7380C261468CD00D0C728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7380B261468CD00D0C728 /* ViewController.swift */; };
@@ -17,6 +29,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E740BC68261473E3006677B7 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		E740BC69261473E3006677B7 /* RegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
+		E740BC6D261474B1006677B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E740BC6E261474B1006677B7 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E740BC722614767C006677B7 /* DisplayOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayOrdersViewController.swift; sourceTree = "<group>"; };
+		E740BC732614767C006677B7 /* DisplayOrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DisplayOrdersViewController.xib; sourceTree = "<group>"; };
+		E740BC77261479B2006677B7 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		E740BC78261479B2006677B7 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		E740BC872614A3B0006677B7 /* LoginUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E740BC882614A3B0006677B7 /* LoginUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E740BC892614A3B0006677B7 /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E740BC8A2614A3B0006677B7 /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7E73804261468CD00D0C728 /* OrderManagementApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderManagementApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7E73807261468CD00D0C728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7E73809261468CD00D0C728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +63,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E740BC852614A2A2006677B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E740BC872614A3B0006677B7 /* LoginUser+CoreDataClass.swift */,
+				E740BC882614A3B0006677B7 /* LoginUser+CoreDataProperties.swift */,
+				E740BC892614A3B0006677B7 /* Order+CoreDataClass.swift */,
+				E740BC8A2614A3B0006677B7 /* Order+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E7E737FB261468CD00D0C728 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +93,7 @@
 		E7E73806261468CD00D0C728 /* OrderManagementApp */ = {
 			isa = PBXGroup;
 			children = (
+				E740BC852614A2A2006677B7 /* Model */,
 				E7E73807261468CD00D0C728 /* AppDelegate.swift */,
 				E7E73809261468CD00D0C728 /* SceneDelegate.swift */,
 				E7E7380B261468CD00D0C728 /* ViewController.swift */,
@@ -66,6 +102,14 @@
 				E7E73815261468CE00D0C728 /* LaunchScreen.storyboard */,
 				E7E73818261468CE00D0C728 /* Info.plist */,
 				E7E73810261468CD00D0C728 /* OrderManagementApp.xcdatamodeld */,
+				E740BC68261473E3006677B7 /* RegistrationViewController.swift */,
+				E740BC69261473E3006677B7 /* RegistrationViewController.xib */,
+				E740BC6D261474B1006677B7 /* LoginViewController.swift */,
+				E740BC6E261474B1006677B7 /* LoginViewController.xib */,
+				E740BC722614767C006677B7 /* DisplayOrdersViewController.swift */,
+				E740BC732614767C006677B7 /* DisplayOrdersViewController.xib */,
+				E740BC77261479B2006677B7 /* OrderTableViewCell.swift */,
+				E740BC78261479B2006677B7 /* OrderTableViewCell.xib */,
 			);
 			path = OrderManagementApp;
 			sourceTree = "<group>";
@@ -127,8 +171,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E740BC752614767C006677B7 /* DisplayOrdersViewController.xib in Resources */,
+				E740BC70261474B1006677B7 /* LoginViewController.xib in Resources */,
 				E7E73817261468CE00D0C728 /* LaunchScreen.storyboard in Resources */,
+				E740BC6B261473E3006677B7 /* RegistrationViewController.xib in Resources */,
 				E7E73814261468CE00D0C728 /* Assets.xcassets in Resources */,
+				E740BC7A261479B2006677B7 /* OrderTableViewCell.xib in Resources */,
 				E7E7380F261468CD00D0C728 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,10 +188,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E740BC8E2614A3B0006677B7 /* Order+CoreDataProperties.swift in Sources */,
+				E740BC742614767C006677B7 /* DisplayOrdersViewController.swift in Sources */,
+				E740BC6F261474B1006677B7 /* LoginViewController.swift in Sources */,
+				E740BC8C2614A3B0006677B7 /* LoginUser+CoreDataProperties.swift in Sources */,
+				E740BC79261479B2006677B7 /* OrderTableViewCell.swift in Sources */,
 				E7E7380C261468CD00D0C728 /* ViewController.swift in Sources */,
+				E740BC8D2614A3B0006677B7 /* Order+CoreDataClass.swift in Sources */,
 				E7E73812261468CD00D0C728 /* OrderManagementApp.xcdatamodeld in Sources */,
 				E7E73808261468CD00D0C728 /* AppDelegate.swift in Sources */,
 				E7E7380A261468CD00D0C728 /* SceneDelegate.swift in Sources */,
+				E740BC6A261473E3006677B7 /* RegistrationViewController.swift in Sources */,
+				E740BC8B2614A3B0006677B7 /* LoginUser+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
