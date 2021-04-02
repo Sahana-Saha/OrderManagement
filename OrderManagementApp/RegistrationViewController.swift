@@ -120,7 +120,7 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func btnRegisterClicked(_ sender: Any) {
         if(isValidPassword(txtPassword.text)){
-            if(txtPassword == txtConfirmPasswd){
+            if(txtPassword.text == txtConfirmPasswd.text){
                 self.fetchRequest()
             }else{
                 let alert = UIAlertController(title: "Alert", message: "password & Confirm Password Not Matched", preferredStyle: UIAlertController.Style.alert)
